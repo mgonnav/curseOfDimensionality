@@ -25,10 +25,10 @@ int main()
     double dist{};
     auto startTime = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < totalData; i++)
-      for (int j = i; j < totalData; j++)
+      for (int j = 0; j < totalData; j++)
       {
         dist = 0;
-        for (size_t k = 0; k < dimensions; k++)
+        for (int k = 0; k < dimensions; k++)
           dist += (data[i][k] - data[j][k]) ^ 2;
         dist = sqrt(dist);
       }
