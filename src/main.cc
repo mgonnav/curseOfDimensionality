@@ -29,7 +29,10 @@ int main()
       {
         dist = 0;
         for (int k = 0; k < dimensions; k++)
-          dist += (data[i][k] - data[j][k]) ^ 2;
+        {
+          long long tmp = data[i][k] - data[j][k];
+          dist += tmp * tmp;
+        }
         dist = sqrt(dist);
       }
     auto endTime = std::chrono::high_resolution_clock::now();
